@@ -1,4 +1,4 @@
-data <- read.csv("/home/puneet/Work/R programmin/dibaties.csv",head=TRUE,sep=",");
+data <- read.csv("./datafiles/dibaties.csv",head=TRUE,sep=",");
 library(caTools)
 split=sample.split(data,SplitRatio = 0.8)
 training <- subset(data, split== TRUE)
