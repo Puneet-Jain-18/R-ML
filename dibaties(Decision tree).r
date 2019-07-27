@@ -1,4 +1,4 @@
-dibaet <- read.csv("./datafiles/dibaties.csv")
+dibaet <- read.csv("./datafiles/diabetes.csv")
 library(caTools)
 split <- sample.split(dibaet , SplitRatio = 0.8);
 
