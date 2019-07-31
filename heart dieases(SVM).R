@@ -17,3 +17,6 @@ trctrl= trainControl(method = "repeatedcv", number =10,repeats = 3 )
 svmLinear <- train(V15 ~. , data =training,method = "svmLinear",
                    trControl = trctrl,
                    preProcess= c("center","scale"),tuneLength=10)
+
+pred <- predict(svmLinear,newdata = testing )
+print(confusionMatrix(table(pred,testing$V15)))
