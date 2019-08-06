@@ -9,8 +9,9 @@ heart <- na.omit(heart)
 split <- sample.split(heart,SplitRatio = 0.8)
 
 training <- subset(heart, split ==T)
+training <- na.omit(training)
 testing <- subset(heart ,split==F)
-
+testing <- na.omit(testing)
 anyNA(heart)
 summary(heart)
 trctrl= trainControl(method = "repeatedcv", number =10,repeats = 3 )
