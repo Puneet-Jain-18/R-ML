@@ -15,7 +15,7 @@ testing <- na.omit(testing)
 anyNA(heart)
 summary(heart)
 trctrl= trainControl(method = "repeatedcv", number =10,repeats = 3 )
-svmLinear <- train(V15 ~. , data =training,method = "svmLinear",
+svmLinear <- train(V15 ~. , data =heart,method = "svmLinear",
                    trControl = trctrl,
                    preProcess= c("center","scale"),tuneLength=10)
 

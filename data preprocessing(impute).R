@@ -1,0 +1,7 @@
+loan <- read.csv("./datafiles/loans.csv")
+print(sum(is.na(loan)))
+library(mice)
+md.pattern(loan)
+  impute <-mice(loan,m=3,seed=122)
+loan<-complete(impute,2)  
+print(sum(is.na(loan)))

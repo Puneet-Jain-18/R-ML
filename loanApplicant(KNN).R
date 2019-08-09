@@ -1,6 +1,6 @@
 loan <- read.csv("./datafiles/loans.csv")
 loan <- loan[,-2]
-na.omit(loan)
+loan <- na.omit(loan)
 head (loan)
 normalize <- function(x){
   return(x-min(x)/(max(x)-min(x)))
@@ -25,6 +25,6 @@ testing <- subset (loan ,split == F)
 NROW(testing)
 
 knn.26 <- knn (train = training, test = testing,cl= training.n,k=54)
-
+  
 
 
