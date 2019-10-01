@@ -7,7 +7,7 @@ training<- subset(dibaet,split ==TRUE);
 testing <-subset(dibaet, split ==FALSE);
 
 library(rpart)
-
+hist(dibaet$type)
 model <- rpart(type~. , data= training )
 print(model)
 

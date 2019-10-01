@@ -10,6 +10,7 @@ testing <- subset(Boston,split==FALSE)
 library(corrplot)
 cr=cor(Boston)
 model <- glm(medv~.-age -indus, training);
+
 control<- trainControl(method ="cv",number=10)
 m<- train(medv ~. -age -indus,data=training,method ="glm",trControl=control)
 pre<-predict(model,testing)
