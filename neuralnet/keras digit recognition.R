@@ -1,6 +1,5 @@
 library(keras)
 mnist <-dataset_mnist()
-mnist <-dataset_mnist()
 # x is a 3D array(images,width,height)
 # y data is output numerical number ranging between 0 to 9
 x_train<-mnist$train$x
